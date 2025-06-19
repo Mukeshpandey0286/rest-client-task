@@ -30,7 +30,7 @@ export default function App() {
 
       setResponse(responseData);
 
-      await axios.post("http://localhost:4000/api/request-history", {
+      await axios.post("https://rest-client-task-2.onrender.com/api/request-history", {
         url,
         method,
         requestBody: body,
@@ -49,7 +49,7 @@ export default function App() {
 
   const fetchHistory = async () => {
     const res = await axios.get(
-      `http://localhost:4000/api/request-history?page=${page}`
+      `https://rest-client-task-2.onrender.com/api/request-history?page=${page}`
     );
     setHistory(res.data.data);
   };
